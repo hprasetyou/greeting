@@ -5,9 +5,11 @@ const Balloons = ({ isActive }) => {
     const homepage = process.env.PUBLIC_URL || '';    
 
     const handleClick = () => {
+        const newX = newPos.x + Math.floor(Math.random() * 21) - 10
+        const newY = newPos.y + Math.floor(Math.random() * 21) - 10
         setNewPos({
-            x: newPos.x + Math.floor(Math.random() * 21) - 10,
-            y: newPos.y + Math.floor(Math.random() * 30) - 10
+            x: newX > 100 ? 100: newX,
+            y: newY > 100 ? 100: newY
         })
     };
 
