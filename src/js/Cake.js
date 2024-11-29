@@ -1,12 +1,13 @@
 import '../css/Cake.css';
-const Cake = (burnCandle = true) => {
+
+const Cake = ({ burnCandle, setBurnCandle }) => {
   const homepage = process.env.PUBLIC_URL || '';
+  const handleClick = () => {
+    setBurnCandle(false);
+  };
   return (
-    <div class="cake">
-      <img src={`${homepage}/flame.webp`} alt="flame" className="flame" onClick={(e) => {
-        e.target.style.transition = 'opacity 0.5s';
-        e.target.style.opacity = '0';
-      }} />   
+    <div className="cake">
+      <img onClick={handleClick} src={`${homepage}/flame.webp`} alt="flame" className={burnCandle ? 'flame' : 'flame extinguished'} />   
       <img src={`${homepage}/simplebirthdaycake.webp`} alt="birthday cake" />
     </div>
   );

@@ -1,0 +1,21 @@
+.sprinkle{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+}
+.sprinkle.active{
+    animation: fall linear 3;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+@keyframes fall {
+    0% {
+        top: -100vh;
+    }
+    100% {
+        top: 100vh;
+    }
+}
+

@@ -23,4 +23,9 @@
   transform: translateX(-60%);
   top: -25px;
   opacity: .9;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.extinguished{
+  opacity: 0;
 }
