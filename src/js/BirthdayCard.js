@@ -1,13 +1,12 @@
 import '../css/Card.css';
 
-const BirthdayCard = ({ name, message }) => {
+const BirthdayCard = ({ name, message, setShowCard, showCard = false }) => {
   const handleClick = () => {
-    const card = document.querySelector('.card');
-    card.classList.toggle('active');
+    setShowCard(!showCard);
   };
 
   return (
-    <div className="card" onClick={handleClick}>
+    <div className={showCard?'card active':'card'} onClick={handleClick}>
       <div className="card-content">
         <h1>Happy Birthday, {name}!</h1>
         <p>{message}</p>

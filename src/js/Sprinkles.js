@@ -16,7 +16,7 @@ const Sprinkles = ({ isActive }) => {
                     height: `${Math.random() * 10 + 10}px`,
                     animationDuration: `${Math.random() * 4 + 1.2}s`,
                     backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-                    transform: `rotate(${Math.random() * 360}deg) ${isActive ? '':'translateY(-100vh)'}`
+                    transform: `rotate(${Math.random() * 360}deg) ${isActive ? '':'translateY(-120vh)'}`
                 }}
             ></div>
         ))}
