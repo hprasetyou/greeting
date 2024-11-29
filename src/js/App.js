@@ -1,5 +1,7 @@
 import BirthdayCard from './BirthdayCard';
 import Cake from './Cake';
+import Flags from './Background';
+
 import '../css/App.css';
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <Flags />
         <BirthdayCard name="John" message={message} />
         <Cake />
       </div>

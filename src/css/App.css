@@ -22,4 +22,25 @@ body {
   min-height: inherit;
   border-radius: 10px;
   background: #fc9d05;
+  overflow: hidden;
+}
+
+.flags {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: .9;
+  transform: scale(1.1) rotate(17deg) translate(6%, -30%);
+}
+
+.table{
+  position: absolute;
+  bottom: 0;
+  transform: scale(2) translateX(70px) translateY(50px);
+}
+
+.table, .table img,
+.flags, .flags img{
+  max-width: 100%;
+  width: 100%;
 }

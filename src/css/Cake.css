@@ -7,10 +7,20 @@
 .cake{
     position: absolute;
     bottom: 0;
+    width: 65%;
+    transform: translate(10%, -70%);
 }
 
 .cake img{
-    width: 75%;
     margin: auto;
     display: block;
+}
+
+.flame {
+  width: 45px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
+  top: -25px;
+  opacity: .9;
 }
