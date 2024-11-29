@@ -3,7 +3,7 @@
     transform: matrix(0.5, -0.01, 0.1, 0.2, 0, 125) rotate(20deg) translate(10%, -150%);
     position: absolute;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    top: 50%;
+    top: 48%;
     z-index: 1;
     left: 50%;
   }
@@ -12,6 +12,9 @@
     transform: rotate(-3deg) translate(-50%, -50%);
   }
 
+  .card.active .card-content {
+    box-shadow: none;
+  }
   .card-content {
     padding: 20px;
     background: yellow;
@@ -29,7 +32,7 @@
     right: 30px;
     transform: scaleX(2.5);
     bottom: -1px; 
-    border-color: #fc9d05;
+    border-color: #bc5e2c;
     border-left-color: transparent;
     border-top-color: transparent;
   }
