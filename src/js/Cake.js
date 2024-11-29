@@ -2,9 +2,10 @@ import '../css/Cake.css';
 
 
 const Cake = (burnCandle = true) => {
+  const homepage = process.env.PUBLIC_URL || '';
   return (
     <div class="cake">
-      <img src="/simplebirthdaycake.webp" alt="birthday cake" />
+      <img src={`${homepage}/simplebirthdaycake.webp`} alt="birthday cake" />
     </div>
   );
 }
