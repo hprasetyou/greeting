@@ -5,6 +5,9 @@ const Background = ({sprinkleRain = false}) => {
     const homepage = process.env.PUBLIC_URL || '';    
     return (
         <div>
+            <div className="floor">
+                <img src={`${homepage}/floor.webp`} alt="floor" />
+            </div>
             <Sprinkles isActive={sprinkleRain}/>
             <Balloons isActive={sprinkleRain}/>
             <div className="flag-line"></div>

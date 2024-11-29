@@ -11,11 +11,13 @@ function App() {
   const [showCard, setShowCard] = useState(false);
 
   const handleBurnCandle = (value) => {
-    setBurnCandle(false);
+    if(burnCandle){
+      setTimeout(() => {
+        setShowCard(true)
+      }, 800);
+      setBurnCandle(false);
+    }
     setSprinkleRain(true); 
-    setTimeout(() => {
-      setShowCard(true)
-    }, 800);
   };
 
   const message = "Wishing you joy, love, and happiness on your special day. May this year bring you wonderful moments and all the success you deserve!";
