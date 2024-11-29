@@ -1,0 +1,43 @@
+.card{
+    width: 80%;
+    transform: rotate(-3deg);
+    position: absolute;
+    left: 10px;
+    top: 10%;
+  }
+  .card-content {
+    padding: 20px;
+    background: yellow;
+    box-shadow: -8px 0px 2px 0px #5c560075;
+  }
+  
+  .card-content::before,
+  .card-content::after {
+    content: '';
+    display: block;
+    width: 0px;
+    border-width: 21px;
+    border-style: solid;
+    position: absolute;
+    right: 30px;
+    transform: scaleX(2.5);
+    bottom: -1px; 
+    border-color: #fc9d05;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+  .card-content::after {
+    border-color: darkgoldenrod;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: -1px -1px 0px #926f17;
+  }
+  
+  .card h1 {
+    color: saddlebrown;
+  }
+  
+  .card p {
+    font-size: 18px;
+  }
+  

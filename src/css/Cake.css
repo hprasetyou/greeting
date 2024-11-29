@@ -1,0 +1,16 @@
+
+.cake,
+.cake img{
+  max-width: 100%;
+}
+
+.cake{
+    position: absolute;
+    bottom: 0;
+}
+
+.cake img{
+    width: 75%;
+    margin: auto;
+    display: block;
+}
