@@ -10,6 +10,7 @@ const BirthdayCard = ({ name, message, setShowCard, showCard = false }) => {
       <div className="card-content">
         <h1>Happy Birthday, {name}!</h1>
         <p>{message}</p>
+        <br />
       </div>
     </div>
   );
