@@ -1,12 +1,12 @@
-  .card{
-    width: 80%;
-    transform: matrix(0.5, -0.01, 0.1, 0.2, 0, 125) rotate(20deg) translate(10%, -150%);
+.card {
+    width: 300px;
+    transform: matrix(0.5, -0.01, 0.1, 0.2, 0, 0) rotate(20deg);
     position: absolute;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    top: 48%;
+    top: -32%;
     z-index: 1;
-    left: 50%;
-  }
+    left: 70%;
+}
 
   .card.active{
     transform: rotate(-3deg) translate(-50%, -50%);
@@ -45,9 +45,10 @@
   
   .card h1 {
     color: saddlebrown;
+    font-size: 1.2em;
   }
   
   .card p {
-    font-size: 14px;
+    font-size: 1em;
   }
   

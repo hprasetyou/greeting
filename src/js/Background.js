@@ -17,9 +17,6 @@ const Background = ({sprinkleRain = false}) => {
             <div className="flags">
                 <img src={`${homepage}/hanging-flags.webp`} alt="flags"  />  
             </div>
-            <div className="table">
-                <img src={`${homepage}/table.webp`} alt="table" />  
-            </div>
             
         </div>
     )
