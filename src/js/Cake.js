@@ -5,6 +5,9 @@ const Cake = ({ burnCandle, setBurnCandle }) => {
   const handleClick = () => {
     setBurnCandle(false);
   };
+  setTimeout(() => {
+    setBurnCandle(false);
+  }, 10000);
   return (
     <div className="cake">
       <img onClick={handleClick} src={`${homepage}/flame.webp`} alt="flame" className={burnCandle ? 'flame' : 'flame extinguished'} />   
