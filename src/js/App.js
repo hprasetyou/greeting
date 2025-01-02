@@ -9,6 +9,7 @@ function App() {
   const [burnCandle, setBurnCandle] = useState(true);
   const [sprinkleRain, setSprinkleRain] = useState(false);
   const [showCard, setShowCard] = useState(false);
+  const homepage = process.env.PUBLIC_URL || ''; 
 
   const handleBurnCandle = (value) => {
     if(burnCandle){
@@ -40,12 +41,13 @@ function App() {
   const recipient = getRecipient()
   
   if(recipient == null){
+    document.title = 'My Page Title';
     return (<div></div>)
   }
   const recipientName = recipient.name
-  const homepage = process.env.PUBLIC_URL || ''; 
   const targetDate = recipient.date
   
+  document.title = `Happy birthday ${recipientName}`
 
   const message = "Wishing you joy, love, and happiness on your special day. May your special day be as wonderful and amazing as you are. Here's to another year of happiness, health, and prosperity. \n May all your dreams come true and each moment be cherished.";
   return (

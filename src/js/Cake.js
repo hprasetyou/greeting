@@ -4,10 +4,9 @@ const Cake = ({ burnCandle, setBurnCandle }) => {
   const homepage = process.env.PUBLIC_URL || '';
   const handleClick = () => {
     setBurnCandle(false);
+    var audio = new Audio(`${homepage}/trumpet.wav`);
+    audio.play();
   };
-  setTimeout(() => {
-    setBurnCandle(false);
-  }, 10000);
   return (
     <div className="cake">
       <img onClick={handleClick} src={`${homepage}/flame.webp`} alt="flame" className={burnCandle ? 'flame' : 'flame extinguished'} />   
