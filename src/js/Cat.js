@@ -1,7 +1,7 @@
 import '../css/Cat.css'
 import { useState } from 'react';
 
-const Cat = () => {
+const Cat = ({shouldShowDialog}) => {
   const homepage = process.env.PUBLIC_URL || '';   
 
   const [showDialog, setShowDialog] = useState(false)
@@ -12,17 +12,12 @@ const Cat = () => {
     setShowDialog(!showDialog)
   }
   setTimeout(() => {
-    let initialized = window.localStorage.getItem('initialized')
-    initialized = parseInt(initialized?initialized:0)
-    if(initialized < 2){
-      setShowDialog(true)
-    }
-    window.localStorage.setItem('initialized',initialized+1)
-  }, 3000);
+    setShowDialog(true)
+  }, 5000);
 
   return (
     <div className="cat-wrap"> 
-      <div className='dialog' style={{opacity:showDialog?1:0}}>
+      <div className='dialog' style={{opacity:showDialog && shouldShowDialog?1:0}}>
         {message}
       </div>
       <div className="cat">

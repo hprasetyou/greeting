@@ -11,7 +11,7 @@ const Background = ({sprinkleRain = false, targetDate}) => {
                 <div className="floor">
                     <img src={`${homepage}/floor.webp`} alt="floor" />
                 </div>
-                <Cat />
+                <Cat shouldShowDialog={!sprinkleRain}/>
             </div>
             <Calendar targetDate={targetDate}/>
             <Sprinkles isActive={sprinkleRain}/>
