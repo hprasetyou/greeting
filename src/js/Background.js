@@ -1,14 +1,17 @@
 import Sprinkles from "./Sprinkles";
 import Balloons from "./Balloons";
 import Calendar from "./Calendar";
+import Cat from "./Cat";
 
-const Background = ({sprinkleRain = false}) => {
-    const homepage = process.env.PUBLIC_URL || '';    
-    const targetDate = '2024-12-07';
+const Background = ({sprinkleRain = false, targetDate}) => {
+    const homepage = process.env.PUBLIC_URL || '';
     return (
         <div>
-            <div className="floor">
-                <img src={`${homepage}/floor.webp`} alt="floor" />
+            <div className="floor-wrap">
+                <div className="floor">
+                    <img src={`${homepage}/floor.webp`} alt="floor" />
+                </div>
+                <Cat />
             </div>
             <Calendar targetDate={targetDate}/>
             <Sprinkles isActive={sprinkleRain}/>
